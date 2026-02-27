@@ -12,7 +12,6 @@ def percentage_bachelors(data):
     total_people = len(data)
     bachelors_count = len(data[data['education'] == 'Bachelors'])
     return round((bachelors_count / total_people) * 100, 1)
-
 def percentage_high_earning_advanced_education(data):
     advanced_education = data[data['education'].isin(['Bachelors', 'Masters', 'Doctorate'])]
     high_earners = advanced_education[advanced_education['salary'] == '>50K']
@@ -59,4 +58,5 @@ if __name__ == "__main__":
     highest_country, percentage = highest_earning_country(data)
     print(f"Country with highest percentage of >50K earners: {highest_country} ({percentage}%)")
     print("Most popular occupation for those earning >50K in India:", popular_occupation_high_earning_india(data))
+
 
