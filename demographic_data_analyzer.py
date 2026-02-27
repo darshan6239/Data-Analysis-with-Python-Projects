@@ -46,7 +46,6 @@ def highest_earning_country(data):
 def popular_occupation_high_earning_india(data):
     india_high_earners = data[(data['native-country'] == 'India') & (data['salary'] == '>50K')]
     return india_high_earners['occupation'].mode()[0]
-
 if __name__ == "__main__":
     print("Race Count:\n", race_count(data))
     print("Average Age of Men:", average_age_men(data))
@@ -58,5 +57,6 @@ if __name__ == "__main__":
     highest_country, percentage = highest_earning_country(data)
     print(f"Country with highest percentage of >50K earners: {highest_country} ({percentage}%)")
     print("Most popular occupation for those earning >50K in India:", popular_occupation_high_earning_india(data))
+
 
 
