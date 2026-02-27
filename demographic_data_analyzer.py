@@ -16,7 +16,6 @@ def percentage_high_earning_advanced_education(data):
     advanced_education = data[data['education'].isin(['Bachelors', 'Masters', 'Doctorate'])]
     high_earners = advanced_education[advanced_education['salary'] == '>50K']
     return round((len(high_earners) / len(advanced_education)) * 100, 1)
-
 def percentage_high_earning_no_advanced_education(data):
     no_advanced_education = data[~data['education'].isin(['Bachelors', 'Masters', 'Doctorate'])]
     high_earners = no_advanced_education[no_advanced_education['salary'] == '>50K']
@@ -57,6 +56,7 @@ if __name__ == "__main__":
     highest_country, percentage = highest_earning_country(data)
     print(f"Country with highest percentage of >50K earners: {highest_country} ({percentage}%)")
     print("Most popular occupation for those earning >50K in India:", popular_occupation_high_earning_india(data))
+
 
 
 
