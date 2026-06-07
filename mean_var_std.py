@@ -5,7 +5,6 @@ def calculate(numbers):
         raise ValueError("List must contain nine numbers.")
 
     matrix = np.array(numbers).reshape(3, 3)
-
     calculations = {
         'mean': [list(np.mean(matrix, axis=0)), list(np.mean(matrix, axis=1)), np.mean(matrix).item()],
         'variance': [list(np.var(matrix, axis=0)), list(np.var(matrix, axis=1)), np.var(matrix).item()],
