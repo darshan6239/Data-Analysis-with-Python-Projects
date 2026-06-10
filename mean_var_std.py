@@ -13,5 +13,4 @@ def calculate(numbers):
         'min': [list(np.min(matrix, axis=0)), list(np.min(matrix, axis=1)), np.min(matrix).item()],
         'sum': [list(np.sum(matrix, axis=0)), list(np.sum(matrix, axis=1)), np.sum(matrix).item()]
     }
-
     return calculations
